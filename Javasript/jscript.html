@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        *{
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="event">HELLO WORLD</h1>
+    <button onclick="fun()">Change</button>
+    <script>
+                    // change the content while clicking the button
+        // var txt = document.getElementById("event");            
+        function fun(){
+            var txt = document.getElementById("event");
+           txt.textContent="BYE WORLD"
+        }            
+
+    class Product{
+        constructor(name,price){
+            this.name = name;
+            this.price = price;
+        }
+        displayProduct(){
+            console.log(this.name,this.price);
+            // console.log(this.price);
+        }
+    }    
+    const product1 = new Product("aaa",203);
+    const product2 = new Product("bbb",46);
+    const product3 = new Product("ddd",384);
+
+    product1.displayProduct();
+    product2.displayProduct();
+    product3.displayProduct();
+
+    </script>
+</body>
+</html>

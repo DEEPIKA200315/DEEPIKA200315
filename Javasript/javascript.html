@@ -1,0 +1,74 @@
+<head>
+    <title>js</title>
+</head>
+
+<body>
+    <center>
+        <button onclick="dis()">Button</button>
+
+
+    </center>
+    <script>
+        // sum of array elemets
+        const a = [88, 73, 75, 29, 16];
+        sum = 0;
+
+        a.forEach(i => {
+            sum = sum + i;
+        });
+        console.log(sum);
+
+
+    //    Funtion Constructor
+  
+        function Product(name,price){
+            this.product_Name = name;
+            this.product_Price = price;
+        }
+ 
+        // adding new function
+        Product.prototype.Discount = function(discount){
+            return  this.product_Price-((this.product_Price*discount)/100);
+            
+        }
+
+        const product1 = new Product("Laptop",50000);
+        const product2 = new Product("Mouse",500);
+        const product3 = new Product("keybord",843);
+
+
+        console.log(product1.product_Name);
+        console.log(product1.Discount(10));
+        
+        console.log(product2.product_Price);
+        console.log(product2.Discount(20));
+
+        // setter and getter
+        // set method used to assign the value to the variable
+        // get method used to return the value
+
+        // inheretance
+
+        // reduce the code line. only use single inheritance
+
+        // syntax
+        // class parent_cls{
+        //     constructor(){
+        //         //
+        //     }
+        //     method1(){
+        //         //
+        //     }
+        // }
+        // class child_cls extends parent_cls{
+        //     super.method1;    //method overriding
+        //     method(){  
+        //         //
+        //     }
+        // }
+
+        // method overriding using super keyword
+
+       
+    </script>
+</body>

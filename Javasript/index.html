@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            background-color: #190250;
+        }
+
+        h1{
+            color: aliceblue;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        div{
+            margin: 40px 0px 0px 400px;
+            padding: 50px;
+            height: 200px;
+            width: 500px;
+            /* margin-top: 40px;
+            margin-left: 400px; */
+            background-color: rgb(240, 222, 195);
+            text-align: center;
+            border: 2px solid rgb(218, 197, 187);
+            border-radius: 5px;
+            box-shadow: 3px 3px rgb(75, 72, 68);
+            position: relative;
+        }
+
+        /* ul{
+            list-style: none;
+        } */
+
+        #add-button{
+            padding: 2px;
+        }
+        #add-button:hover{
+           cursor: pointer;
+           background-color: green;
+           color: white;
+           font-size: 15px;
+        }
+        #btn2{
+            background-color: red;
+        }
+        input{
+            height: 25px;
+            width: 250px;
+        }
+        #div{
+   position: absolute;
+   padding: 0%;
+        }
+       
+
+
+    </style>
+</head>
+
+<body>
+    <h1>TO DO LIST</h1>
+<div>
+    <input id="input">
+    <button id="add-button" onclick="add()">Add</button><br>
+<br>
+    <ul id="div">
+        <li>Wakeup
+            <button onclick="removeItem(event)" id="btn2">Delete</button><br>
+        </li>
+    </ul>
+</div>
+
+    <script>
+        const input = document.getElementById("input");
+        const div_ul = document.getElementById("div")
+        function add() {
+            const newLi = document.createElement("li");
+            newLi.innerHTML = input.value + "<button onclick='removeItem(event)'style='background-color: red;'>Delete</button>";
+            div_ul.append(newLi);
+            input.value = ' ';
+        }
+        
+        function removeItem(event){
+            event.target.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>
